@@ -3,7 +3,7 @@ import shortid from "shortid";
 import { addContact, deleteContact } from "./contactsActions";
 import { updateFilter } from "./filterActions";
 
-const initialState = JSON.parse(localStorage.getItem("contacts") ?? []);
+const initialState = JSON.parse(localStorage.getItem("contacts") ?? "[]");
 
 const itemsReducer = createReducer(initialState, {
   [addContact]: (state, action) => {
